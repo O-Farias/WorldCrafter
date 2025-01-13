@@ -32,6 +32,6 @@ def criar_mundo():
         "nome": gerar_nome_mundo(),
         "cultura": gerar_cultura(),
         "clima": gerar_clima(),
-        "populacao": gerar_populacao(),
+        "populacao": f"{gerar_populacao():,}".replace(",", ".")  # Formata com separador de milhares
     }
     return mundo
