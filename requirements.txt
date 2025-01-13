@@ -2,3 +2,5 @@ sqlalchemy
 python-dotenv
 pytest
 faker
+
+colorama
