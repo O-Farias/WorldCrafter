@@ -1,6 +1,6 @@
-from app.services.world_service import gerar_mundo
+from app.services.world_service import criar_mundo
 from app.services.city_service import criar_cidade
-from app.services.race_service import criar_raca
+from app.services.race_service import criar_raca 
 from colorama import Fore, Style
 
 def menu():
@@ -16,7 +16,7 @@ def menu():
 
         if opcao == "1":
             # Criar Mundo
-            mundo = gerar_mundo()
+            mundo = criar_mundo()
             print(Fore.GREEN + "\n🌍 Mundo Gerado:" + Style.RESET_ALL)
             print(Fore.YELLOW + f"Nome: {mundo['nome']}" + Style.RESET_ALL)
             print(Fore.YELLOW + f"Cultura: {mundo['cultura']}" + Style.RESET_ALL)
@@ -25,17 +25,19 @@ def menu():
 
         elif opcao == "2":
             # Criar Cidade
-            nome = input(Fore.CYAN + "Digite o nome da cidade: " + Style.RESET_ALL)
-            populacao = input(Fore.CYAN + "Digite a população da cidade: " + Style.RESET_ALL)
-            cidade = criar_cidade(nome, populacao)
-            print(Fore.GREEN + f"\n🏙️ Cidade criada: {cidade['nome']} com {cidade['populacao']} habitantes." + Style.RESET_ALL)
+            cidade = criar_cidade()
+            print(Fore.GREEN + f"\n🏙️ Cidade Criada:" + Style.RESET_ALL)
+            print(Fore.YELLOW + f"Nome: {cidade['nome']}" + Style.RESET_ALL)
+            print(Fore.YELLOW + f"População: {cidade['populacao']}" + Style.RESET_ALL)
+            print(Fore.YELLOW + f"Descrição: {cidade['descricao']}" + Style.RESET_ALL)
 
         elif opcao == "3":
             # Criar Raça
-            nome = input(Fore.CYAN + "Digite o nome da raça: " + Style.RESET_ALL)
-            habilidade = input(Fore.CYAN + "Digite uma habilidade especial da raça: " + Style.RESET_ALL)
-            raca = criar_raca(nome, habilidade)
-            print(Fore.GREEN + f"\n🧝 Raça criada: {raca['nome']} com habilidade especial: {raca['habilidade']}" + Style.RESET_ALL)
+            raca = criar_raca()
+            print(Fore.GREEN + f"\n🧝 Raça Criada:" + Style.RESET_ALL)
+            print(Fore.YELLOW + f"Nome: {raca['nome']}" + Style.RESET_ALL)
+            print(Fore.YELLOW + f"Habilidade Especial: {raca['habilidade']}" + Style.RESET_ALL)
+            print(Fore.YELLOW + f"Característica: {raca['caracteristica']}" + Style.RESET_ALL)
 
         elif opcao == "4":
             print(Fore.GREEN + "Saindo... 👋" + Style.RESET_ALL)
