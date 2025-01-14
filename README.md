@@ -60,7 +60,7 @@ WorldCrafter/
 
 ### 1. Clone o Repositório
 ```bash
-git clone https://github.com/SEU_USUARIO/WorldCrafter.git
+git clone https://github.com/O-Farias/WorldCrafter.git
 cd WorldCrafter
 ```
 
